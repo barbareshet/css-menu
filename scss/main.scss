@@ -1,0 +1,109 @@
+@import "colors";
+body{
+  width: 960px;
+  margin: 0 auto;
+  h1{
+    text-align: center;
+  }
+}
+.menus-wrap{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  height: 150px;
+}
+.menu {
+  padding: 15px;
+  margin: 0 auto;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  .menu-name{
+    text-transform: capitalize;
+  }
+  &.hamburger{
+    .bar{
+      width: 35px;
+      height: 5px;
+      background-color: $dark;
+      margin: 6px 0;
+      transition: 0.4s;
+      display: block;
+      &.bar1{
+        width: 35px;
+      }
+      &.bar2{
+        width: 35px;
+      }
+    }
+  }
+  &.oreos{
+    .bar{
+      width: 35px;
+      height: 5px;
+      background-color: $dark;
+      margin: 6px 0;
+      transition: 0.4s;
+      display: block;
+      &.bar1,
+      &.bar3{
+        width: 35px;
+        border-radius: 5px 5px 0 0;
+      }
+      &.bar2,
+      &.bar4{
+        width: 35px;
+        border-radius: 0 0 5px 5px;
+      }
+
+    }
+  }
+  &.kebab{
+    .bar{
+      width: 5px;
+      height: 5px;
+      background-color: $dark;
+      margin: 6px 0;
+      transition: 0.4s;
+      display: block;
+      border-radius: 50%;
+      &.bar1{
+        width: 5px;
+      }
+      &.bar2{
+        width: 5px;
+      }
+    }
+  }
+  &.candy-box{
+    .bar{
+      width: 3px;
+      height: 3px;
+      background-color: $dark;
+      border: 3px solid $dark;
+      border-radius: 50%;
+      margin: 6px 0;
+      transition: 0.4s;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+
+    }
+  }
+  &.chocolate{
+    .bar{
+      width: 3px;
+      height: 3px;
+      background-color: $dark;
+      border: 3px solid $dark;
+      border-radius: 0;
+      margin: 6px 0;
+      transition: 0.4s;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+
+    }
+  }
+}
